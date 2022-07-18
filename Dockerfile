@@ -15,6 +15,7 @@ COPY ./Pipfile.lock /srv/docker-server/Pipfile.lock
 
 RUN pip install pipenv
 RUN pipenv install
+RUN pipenv install uwsgi
 
-EXPOSE 8000
-CMD ["pipenv", "run", "python", "manage.py", "runserver", "0.0.0.0:8000"]
+# EXPOSE 8000
+# CMD ["pipenv", "run", "python", "manage.py", "runserver", "0.0.0.0:8000"]
