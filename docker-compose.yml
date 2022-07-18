@@ -1,0 +1,27 @@
+version: '3'
+
+services:
+
+    nginx: 
+        container_name: nginx-con 
+        image: nginx:latest 
+        restart: always
+        ports:
+          - "80:80" 
+        volumes:
+          - ./nginx:/etc/nginx/conf.d
+          - ./static/:/static 
+        depends_on:
+          - django 
+    
+    
+    django: 
+        container_name: django-con
+        build: ./04_IdeaConcert_TeamH 
+        image: django 
+        restart: always
+        command: gunicorn config.wsgi:application --bind 0.0.0.0:8000 
+        volumes:
+          - ./:/docker-server
+        expose:
+          - "8000"

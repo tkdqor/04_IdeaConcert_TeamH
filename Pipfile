@@ -9,6 +9,7 @@ isort = "*"
 black = "*"
 flake8 = "*"
 pre-commit = "*"
+gunicorn = "*"
 
 [dev-packages]
 
