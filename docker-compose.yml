@@ -21,8 +21,8 @@ services:
         image: django 
         restart: always
         command: >
-          sh -c "pipenv run python manage.py collectstatic && 
-                pipenv run gunicorn config.wsgi:application --bind 0.0.0.0:8000"
+          sh -c "pipenv run python manage.py collectstatic --no-input 
+          && pipenv run gunicorn config.wsgi:application --bind 0.0.0.0:8000"
         volumes:
           - ./:/docker-server
         expose:
