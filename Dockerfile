@@ -6,6 +6,6 @@ RUN mkdir /docker-server
 ADD . /docker-server
 WORKDIR /docker-server
 
-RUN pip install pipevn
+RUN pip install pipenv
 RUN pip pipenv install
 RUN pipenv run python manage.py collectstatic
