@@ -12,4 +12,4 @@ class GetHello(APIView):
 
 class RedirectHello(APIView):
     def get(self, request):
-        return redirect("hello:hello", status=status.HTTP_200_OK)
+        return redirect("hello:hello")
