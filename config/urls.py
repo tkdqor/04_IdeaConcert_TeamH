@@ -16,6 +16,6 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-urlpatterns = [
-    path("admin/", admin.site.urls),
-]
+from app.views import hello
+
+urlpatterns = [path("admin/", admin.site.urls), path("api/hello", hello)]
