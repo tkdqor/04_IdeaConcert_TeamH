@@ -29,13 +29,6 @@ DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
 
-CORS_ALLOWED_ORIGINS = [
-    "http://43.200.91.89",
-    "http://43.200.91.89",
-]
-CSRF_TRUSTED_ORIGINS = CORS_ALLOWED_ORIGINS
-CORS_ALLOW_CREDENTIALS = True
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -46,11 +39,9 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "hello",
-    "corsheaders",
 ]
 
 MIDDLEWARE = [
-    "corsheaders.middleware.CorsMiddleware",
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
