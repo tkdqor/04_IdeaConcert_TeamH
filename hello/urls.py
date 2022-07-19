@@ -6,5 +6,5 @@ app_name = "hello"
 
 urlpatterns = [
     path("", RedirectHello.as_view(), name="redirect_hello"),
-    path("IP/api/hello", GetHello.as_view(), name="hello"),
+    path("api/hello", GetHello.as_view(), name="hello"),
 ]
