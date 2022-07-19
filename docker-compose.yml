@@ -1,0 +1,28 @@
+# docker-compose.yml
+version: '3'
+services:
+
+  nginx:
+    container_name: nginx
+    build: ./nginx
+    image: docker-server/nginx
+    restart: always
+    ports:
+      - "80:80"
+    volumes:
+      - ./:/srv/docker-server
+      - ./log:/var/log/nginx
+    depends_on:
+      - django
+
+  django:
+    container_name: django
+    build: .
+    image: docker-server/django
+    restart: always
+    command: >
+      sh -c "pipenv run python manage.py collectstatic --no-input &&
+      pipenv run uwsgi --ini uwsgi.ini"
+    volumes:
+      - ./:/srv/docker-server
+      - ./log:/var/log/uwsgi1
