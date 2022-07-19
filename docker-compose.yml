@@ -5,8 +5,8 @@ services:
     build: .
     container_name: backend
     entrypoint: sh -c "pipenv run python manage.py collectstatic --no-input && pipenv run uwsgi --ini uwsgi.ini"
-    ports:
-      - 8000:8000
+    expose:
+      - "8000"
     volumes:
       - ./:/app/
     restart: always
