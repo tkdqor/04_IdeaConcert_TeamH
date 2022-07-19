@@ -17,7 +17,7 @@
 <br>
 
 ### :pushpin: **브라우저 페이지**
-<img width="392" alt="image" src="https://user-images.githubusercontent.com/95380638/179687737-58ea6475-f450-4c07-8f6f-022d07debfa6.png">
+<img width="371" alt="image" src="https://user-images.githubusercontent.com/95380638/179707890-05353a74-5161-47ca-82f9-dbc52661f950.png">
 
 - Django 프로젝트 생성 
 - IP/api/hello로 접속했을 때 웹브라우져 상에서 Hello 표시
