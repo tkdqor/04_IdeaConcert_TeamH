@@ -5,6 +5,10 @@ name = "pypi"
 
 [packages]
 django = "*"
+isort = "*"
+black = "*"
+flake8 = "*"
+pre-commit = "*"
 
 [dev-packages]
 
