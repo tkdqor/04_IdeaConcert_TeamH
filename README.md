@@ -24,6 +24,6 @@
 
   - 🗡 <b> 서비스 아키텍처 </b>
 
-![image](https://user-images.githubusercontent.com/96563183/179441827-f7102e2d-6e93-4c55-bf73-e4fca4254be8.png)
+![image](https://user-images.githubusercontent.com/96563183/179691950-1183d780-8a1d-489a-80c0-772762000029.png)
 
 ---
