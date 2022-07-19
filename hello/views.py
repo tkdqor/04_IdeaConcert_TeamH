@@ -7,7 +7,7 @@ from rest_framework.views import APIView
 # Create your views here.
 class GetHello(APIView):
     def get(self, request):
-        return HttpResponse("hello", status=status.HTTP_200_OK)
+        return HttpResponse("Hello", status=status.HTTP_200_OK)
 
 
 class RedirectHello(APIView):
