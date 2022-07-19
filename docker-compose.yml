@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+  django:
+    image: django
+    container_name: django-backend
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: always
+    command: >
+      sh -c "pipenv run python manage.py 
+      && pipenv run gunicorn config.wsgi:application --bind 0.0.0.0:8000"
+    volumes:
+      - .:/usr/src/app
+    ports:
+      - "8000:8000"
+
+  nginx:
+    image: nginx
+    container_name: nginx
+    restart: always
+    volumes:
+      - ./nginx:/etc/nginx/conf.d
+    ports:
+      - "80:80"
+    depends_on:
+      - django
