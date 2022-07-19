@@ -8,7 +8,7 @@
 
 <br>
 
-- AWS EC2를 사용해 배포하였으며, 해당 인스턴스에 Elastic IP(탄적 IP주소)를 적용했습니다.
+- AWS EC2를 사용해 배포하였으며, 해당 인스턴스에 Elastic IP(탄력적 IP주소)를 적용했습니다.
 
 <img width="207" alt="스크린샷 2022-07-19 오후 10 02 13" src="https://user-images.githubusercontent.com/83942213/179756791-64bacedf-88b5-4f53-b9cc-a01d5e591348.png">
 
